@@ -47,18 +47,22 @@ class SlackDataLoader:
 
         # specify path to get json files
         combined = []
+        
         for json_file in glob.glob(f"{path_channel}*.json"):
             with open(json_file, 'r', encoding="utf8") as slack_data:
                 combined.append(json.load(slack_data))
 
         # loop through all json files and extract required informations
         dflist = []
+
         for slack_data in combined:
 
             msg_type, msg_content, sender_id, time_msg, msg_dist, time_thread_st, reply_users, \
             reply_count, reply_users_count, tm_thread_end = [],[],[],[],[],[],[],[],[],[]
 
             for row in slack_data:
+                if 'type' not in row:
+                    continue
                 if 'bot_id' in row.keys():
                     continue
                 else:
