@@ -7,6 +7,7 @@ import copy
 from datetime import datetime
 from pick import pick
 from time import sleep
+import glob
 
 
 def slack_parser(path_channel):
