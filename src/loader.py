@@ -99,7 +99,6 @@ class SlackDataLoader:
         dfall = pd.concat(dflist, ignore_index=True)
         dfall['channel'] = path_channel.split('/')[-1].split('.')[0]        
         dfall = dfall.reset_index(drop=True)
-        
         return dfall
 
         
