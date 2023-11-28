@@ -7,8 +7,7 @@ from collections import Counter
 
 import pandas as pd
 from matplotlib import pyplot as plt
-import seaborn as sns
-from nltk.corpus import stopwords
+
 
 
 def slack_parser(path_channel):
