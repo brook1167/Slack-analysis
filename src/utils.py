@@ -5,7 +5,7 @@ import datetime
 from collections import Counter
 import pandas as pd
 from matplotlib import pyplot as plt
-
+import re
 
 
 def slack_parser(path_channel):
@@ -345,3 +345,4 @@ def convert_2_timestamp(column, data):
                 timestamp_.append(a.strftime('%Y-%m-%d %H:%M:%S'))
         return timestamp_
     else: print(f"{column} not in data")
+
