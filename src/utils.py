@@ -1,11 +1,11 @@
 import os
 import glob
 import json
-import datetime
 from collections import Counter
 import pandas as pd
 from matplotlib import pyplot as plt
 import re
+import datetime
 
 
 def slack_parser(path_channel):
