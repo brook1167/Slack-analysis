@@ -13,7 +13,7 @@ data_loader  = SlackDataLoader
 
 
 
-slack_data = data_loader.slack_parser('../data/all-week5/')
+slack_data = data_loader.slack_parser('../data/all-week1/')
 
 
 data_loader = SlackDataLoader
@@ -36,7 +36,8 @@ top_10_replaying_users = slack_data.groupby('sender_name')['reply_count'].sum().
 
 # Convert Series to DataFrame and reset the index
 top_10_dataframe = top_10_replaying_users.reset_index(name='reply_count')
-# st.text('week7 channel')
+
+st.text('week1 channel')
 st.text('Top 10 users by replaying count')
 
 # Bar chart
@@ -164,5 +165,4 @@ st.scatter_chart(
 
 # Print the most active channel
 st.write(f"The most highest activity is on channel: {most_active_channel['channel']}")
-
 
