@@ -13,6 +13,9 @@ conf/**/*credentials*
 data/**
 logs/**
 notebooks/all-weeks-data.csv
+notebooks/all-week.csv
+notebooks/slack-data-m.csv
+
 # except their sub-folders
 !data/**/
 !logs/**/
